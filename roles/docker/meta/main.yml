@@ -1,0 +1,16 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: yeasy@github
+  description: Installs docker-engine on Ubuntu 14.04 LTS
+  company: "yeasy@github"
+  license: BSD
+  min_ansible_version: 1.4
+  categories:
+  - system
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty

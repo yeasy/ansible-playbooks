@@ -1,0 +1,9 @@
+---
+# tasks file for web-server
+- name: make sure nginx is installed
+  apt: "name={{ item }} state=present"
+  with_items:
+    - nginx
+
+- name: make sure nginx is running
+  service: "name=nginx state=running"

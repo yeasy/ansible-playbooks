@@ -1,10 +1,4 @@
 ---
 # tasks file for common
-- name: Update apt cache
-  apt: update_cache=yes
-
-- name: Make sure apt can use https
-  apt: "name={{ item }} state=present"
-  with_items:
-    - apt-transport-https
-    - ca-certificates
+- include: apt.yml
+- include: ntp.yml

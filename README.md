@@ -11,9 +11,11 @@ Hosts can be defined inside `/etc/ansible/hosts`, e.g.,
 localhost
 ```
 
+Otherwise, you can use the `-i hosts` option to take the local `hosts` file.
+
 ### Apply role
 Run ansible-playbook with given yaml file name, by default, will apply the
-whole stack on all host.
+stack on all host.
 
 e.g.,
 
@@ -25,7 +27,8 @@ $ ansible-playbook web-server.yml
 $ ansible-playbook site.yml --limit webserver
 ```
 
-By default, this will apply the role in yml file to all hosts.
+This will apply the role in yml file to all hosts. `site.yml` will apply the
+whole stack.
 
 If you wanna run at localhost without ssh, then just add `-c local`, e.g.,
 ```sh

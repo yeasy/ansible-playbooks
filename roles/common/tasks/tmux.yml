@@ -1,0 +1,6 @@
+---
+# Install tmux
+
+- name: Make sure tmux is installed
+  package: name=tmux state=installed
+  tags: tmux

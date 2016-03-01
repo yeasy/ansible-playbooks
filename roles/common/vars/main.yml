@@ -1,2 +1,4 @@
 ---
 # vars file for common
+
+ntpserver: server 0.pool.ntp.org

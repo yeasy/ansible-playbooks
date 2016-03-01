@@ -2,19 +2,37 @@
 Some useful playbooks for ansible.
 
 ## Usage
-Run ansible-playbook with given yaml file name.
+
+### Define the host
+
+Hosts can be defined inside `/etc/ansible/hosts`, e.g.,
+```sh
+[local]
+localhost
+```
+
+### Apply role
+Run ansible-playbook with given yaml file name, by default, will apply the
+whole stack on all host.
 
 e.g.,
+
+```sh
+$ ansible-playbook web-server.yml
+```
 
 ```sh
 $ ansible-playbook site.yml --limit webserver
 ```
 
+By default, this will apply the role in yml file to all hosts.
+
+If you wanna run at localhost without ssh, then just add `-c local`, e.g.,
 ```sh
-$ ansible--playbook web-server.yml
+$ ansible-playbook -c local  common.yml
 ```
 
-You can also create your own playbook using the role.
+You can also modify the playbook to change the default role.
 
 For instance.
 ```sh
@@ -24,7 +42,10 @@ For instance.
 ```
 
 ## common
-Some common tasks like update system packages.
+Some common tasks like
+* Update system cache
+* Install/Config ntp
+* Install tmux.
 
 ## docker
 Install docker to the system.
@@ -32,5 +53,10 @@ Install docker to the system.
 ## web-server
 Will apply on the `webserver` type host.
 
-* make sure nginx is installed
-* make sure nginx is running
+* make sure Nginx is installed
+* make sure Nginx is running
+
+
+## Acknowledgement
+The project is highly inspired by the [ansible-examples](https://github
+.com/ansible/ansible-examples).

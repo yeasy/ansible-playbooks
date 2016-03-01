@@ -1,8 +1,9 @@
 ---
-- hosts: all
+- name: apply common configuration
+  hosts: all
   become: yes
   become_method: sudo
   pre_tasks:
-    - shell: echo 'will apply role'
+    - shell: echo "will apply role common"
   roles:
      - common

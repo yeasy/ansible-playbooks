@@ -1,3 +1,5 @@
 ---
-# file: site.yml
+# file: site.yml, will apply whole stack
+- include: common.yml
+- include: docker.yml
 - include: webservers.yml

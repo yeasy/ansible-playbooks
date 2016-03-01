@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Install and config Docker service
+  hosts: all
   become: yes
   become_method: sudo
   pre_tasks:

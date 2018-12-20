@@ -61,5 +61,4 @@ Will apply on the `webserver` type host.
 
 
 ## Acknowledgement
-The project is highly inspired by the [ansible-examples](https://github
-.com/ansible/ansible-examples).
+The project is highly inspired by the [ansible-examples](https://github.com/ansible/ansible-examples).
